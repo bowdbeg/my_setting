@@ -155,3 +155,8 @@ _cache_hosts=($( print_known_hosts ))
 alias alarm="mpg123 ${HOME}/.local/share/alarm/Wecker-sound.mp3"
 export PATH="${PATH}:/home/makino.15083/git/sentencepiece/bazel-bin/src"
 export LD_LIBRARY_PATH=${HOME}/.local/lib:$LD_LIBRARY_PATH
+
+alias tb='tensorboard --logdir '
+alias tb1='tensorboard --port 6007 --logdir '
+alias tb2='tensorboard --port 6008 --logdir '
+alias tb3='tensorboard --port 6009 --logdir '
