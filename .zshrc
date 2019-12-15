@@ -160,3 +160,10 @@ alias tb='tensorboard --logdir '
 alias tb1='tensorboard --port 6007 --logdir '
 alias tb2='tensorboard --port 6008 --logdir '
 alias tb3='tensorboard --port 6009 --logdir '
+alias clip='xsel -bi'
+
+# maven
+export JAVA_HOME=/usr/lib/jvm/default-java
+export M2_HOME=/opt/maven
+export MAVEN_HOME=/opt/maven
+export PATH=${M2_HOME}/bin:${PATH}
