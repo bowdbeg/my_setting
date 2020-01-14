@@ -97,6 +97,14 @@ fi
 
 
 
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init -)"
+
+eval "$(pyenv virtualenv-init -)"
+
+export PATH="$PATH:/snap/bin:/usr/local/MATLAB/R2018b/bin"
+
 # 色を使用
 autoload -Uz colors
 colors
@@ -154,7 +162,13 @@ alias tb2='tensorboard --port 6008 --logdir '
 alias tb3='tensorboard --port 6009 --logdir '
 alias clip='xsel -bi'
 
+# maven
+export JAVA_HOME=/usr/lib/jvm/default-java
+export M2_HOME=/opt/maven
+export MAVEN_HOME=/opt/maven
+export PATH=${M2_HOME}/bin:${PATH}
+
 # tensorboard
-alias tbd="docker run --rm -t -v $PWD:/workspace  tensorflow/tensorflow tensorboard --logdir /workspace --port 6106 --bind_all"
-alias tbd1="docker run --rm -t -v $PWD:/workspace  tensorflow/tensorflow tensorboard --logdir /workspace --port 6107 --bind_all"
+alias tbd="docker run --rm -t -p 6106:6106 -v $PWD:/workspace  tensorflow/tensorflow tensorboard --logdir /workspace --port 6106 --bind_all"
+alias tbd1="docker run --rm -t -p 6107:6107 -v $PWD:/workspace  tensorflow/tensorflow tensorboard --logdir /workspace --port 6107 --bind_all"
 
