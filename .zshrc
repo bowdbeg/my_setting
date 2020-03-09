@@ -96,12 +96,13 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 
+if [ -s ~/.pyenv ]; then
+    export PYENV_ROOT=$HOME/.pyenv
+    export PATH=$PYENV_ROOT/bin:$PATH
+    eval "$(pyenv init -)"
 
-export PYENV_ROOT=$HOME/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
-eval "$(pyenv init -)"
-
-eval "$(pyenv virtualenv-init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
 
 export PATH="$PATH:/snap/bin:/usr/local/MATLAB/R2018b/bin"
 
