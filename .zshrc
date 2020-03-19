@@ -172,4 +172,7 @@ export PATH=${M2_HOME}/bin:${PATH}
 # tensorboard
 alias tbd='docker run --rm -t -p 6106:6106 -v $PWD:/workspace  tensorflow/tensorflow tensorboard --logdir /workspace --port 6106 --bind_all'
 alias tbd1='docker run --rm -t -p 6107:6107 -v $PWD:/workspace  tensorflow/tensorflow tensorboard --logdir /workspace --port 6107 --bind_all'
+alias tbd2='docker run --rm -t -p 6108:6108 -v $PWD:/workspace  tensorflow/t    ensorflow tensorboard --logdir /workspace --port 6108 --bind_all'
+alias tbd3='docker run --rm -t -p 6109:6109 -v $PWD:/workspace  tensorflow/t    ensorflow tensorboard --logdir /workspace --port 6109 --bind_all'
+alias tbd4='docker run --rm -t -p 6110:6110 -v $PWD:/workspace  tensorflow/t    ensorflow tensorboard --logdir /workspace --port 6110 --bind_all'
 
