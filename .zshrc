@@ -100,8 +100,10 @@ if [ -s ~/.pyenv ]; then
     export PYENV_ROOT=$HOME/.pyenv
     export PATH=$PYENV_ROOT/bin:$PATH
     eval "$(pyenv init -)"
-
-    eval "$(pyenv virtualenv-init -)"
+    
+    if [ -s ~/.pyenv/plugins/pyenv-virtual-env ]; then
+        eval "$(pyenv virtualenv-init -)"
+    fi
 fi
 
 export PATH="$PATH:/snap/bin:/usr/local/MATLAB/R2018b/bin"
